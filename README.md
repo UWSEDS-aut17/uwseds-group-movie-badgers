@@ -1,20 +1,19 @@
-# Project Repository
+# Movie_Income_Prediction
+The movie industry is huge income generater in the entertainment industry, there are many variables that contributes to how successful a movie is, but it's hard to understand how these variables work. 
 
-This homework is done as a group. You will be creating your team repository.
+![Image of movie income](http://www.thesoobproductions.co.uk/wp-content/uploads/2012/10/movie-money-film-reel.ju_.09.jpg)
+![Image of movie trends by time and lable](https://www.cdc.gov/pcd/issues/2012/images/12_0170_03.gif)
 
-You should do the following:
-- Create a repository for your team with a license and a .gitignore file.
-- Construct an initial README file that describes the problem you are addressing (but not necessarily how you will address it). Include at least one image and a link to another web page.
-- Create a Docs folder, and in that folder create a file named data.md. The document should have the following sections:
-  - Requirements. List the kind of information required to answer the questions described in the README file.
-  - Sources. List the data sets that you are considering using, their content, and their availability.
-  - Evaluation. The core part of this section is a table that analyzes the choice of data. The columns of the table are data sets described in the "Data" section. The rows are requirements of the data based on the questions you want to answer. You should complete the cells in the table.
-  
-Each person in the team should make at least one commit to the repository.
+This project aims to **predict movie profit (revenue - budgeted cost)** based on genre, director(s), actor(s)/actress(es), release season (month), rating (R, PG13...), other movies released in the same time, average user ratings from IMBD and popularity (number of votes). We also consider to do a sentiment analysis on movie reviews and use the results as predictors to predict movie profit.  
 
-Rubric. Items 1-4 are group grades. Item 5 is an individual grade.
-1. Created repository with all team members as collaborators, and README file describes the questions addressed by the project. (1 pt)
-2. data.md has a Requirements section with appropriate content. (1 pt)
-3. data.md has a Sources section with appropriate content. (1 pt)
-4. data.md has a Evaluation section with appropriate content. (1 pt)
-5. You made a commit to the repository. (1 pt)
+There are two datasets for this project. The first is the basic details regarding movies, including genre, directors, actors, lables, release, rating, and popularity. This data will be coming from an API call to IMDB. The second set of data looks at profit information and reviews regarding a movie. The two datasets will be linked through **imdb id** which is available on both datasets as unique identifier.
+
+API Data accessed:
+IMBD movie informaiton
+http://www.imdb.com/interfaces/
+
+Movie DB profit information
+https://developers.themoviedb.org/3/movies/get-movie-details
+
+Collaborators:
+Anna Huang, Jingyun Chen, Weichen Xu, Chen Ren, Junmeng Zhu
