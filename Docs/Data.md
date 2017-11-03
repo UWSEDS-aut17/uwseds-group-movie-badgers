@@ -21,9 +21,9 @@ The rows are requirements of the data based on the questions you want to answer.
 |Movie Profit Info||:heavy_check_mark:|
 |Movie Profit Prediction|:heavy_check_mark:|:heavy_check_mark:|
 
-Basic Movie Info: Contains the basic information of different movies. 
+Basic Movie Info: Contains the basic information of different movies.
 e.g. genres, runtimeMinutes, titleType, averageRating, Votes
 
-Movie Profit Info: Contains the Revenue of movies
+Movie Profit Info: Contains the revenue and budget of movies
 
 
