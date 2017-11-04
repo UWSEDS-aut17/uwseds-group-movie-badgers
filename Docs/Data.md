@@ -1,4 +1,4 @@
-# Discription of Data Used #
+# Description of Data Used #
 
 
 ## Requirements ##
@@ -6,7 +6,7 @@ This project aims to predict movie profit (revenue - budgeted cost) based on gen
 
 
 ## Sources ##
-There are two datasets for this project. The first is the basic details regarding movies, including genre, directors, actors,, release year, rating, user average ratings and popularity. This data will be coming from an API call to IMDB. The second set of data looks at reviews and profit information regarding a movie. The two datasets will be linked through imdb id which is available on both datasets as unique identifier.
+There are two datasets for this project. The first is the basic details of movies, including genre, directors, actors, release year, rating, user average ratings and popularity. This data comes from an API call to IMDB. The second set of data looks at reviews and profit information regarding a movie. The two datasets will be linked through "imdb id" which is available on both datasets as unique identifier.
 
 * IMBD API: http://www.imdb.com/interfaces
 * Movie API: https://developers.themoviedb.org/3/movies/get-movie-details
