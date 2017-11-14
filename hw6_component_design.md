@@ -2,9 +2,9 @@
 
 
 ## Component list. 
-- Access movie_id from TMDB
-- Get movie_information from OMDB
-- Combine movie_id and movie_information and save as .csv
+- Access movie id from TMDB and obtain revenue_df via OMDB API
+- Get movie information_df through OMDB API
+- Combine revenue_df and information_df and save as .csv
 - Conduct missing value imputation
 - Visualize features
 - Extract features
