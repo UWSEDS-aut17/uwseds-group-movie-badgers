@@ -1,6 +1,6 @@
 # Component Design
 
-The component design document should have the following sections:
+The documentation has the following sections:
 - Component list. 
   - Access movie_id from TMDB
   - Get movie_information from OMDB
@@ -13,7 +13,7 @@ The component design document should have the following sections:
   - Deploy analysis result to WebUI
   - ...
   
-- Component specifications. For each component, you should have a section that specifies:
+- Component specifications. 
   - What it does. This should be a high level description of the roles of the component.
   - Name. This should be the name that you use in the component's implementation (e.g., the name of a python class or function).
   - Inputs. Be specific about the data types. For DataFrames, specify the column names and the types of the column values.
