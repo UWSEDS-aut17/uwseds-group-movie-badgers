@@ -8,7 +8,8 @@
 - Conduct missing value imputation
 - Visualize features
 - Extract features
-- Perform regression models
+- Built regression models
+- Perform regression analysis and tune parameters on each model
 - Compare regression models
 - Deploy analysis result to WebUI
 - ...
