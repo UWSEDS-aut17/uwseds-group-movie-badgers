@@ -23,20 +23,20 @@
 
 # Conduct Data Cleaning
 - Name
-  DataCleaning.py 
+DataCleaning.py 
 - What it does
-  Clean the initial raw data. Categorize several multilevel variables into a more obvious formation that will work better in the model. Remove or compensate the missing value with average value based on different data types. 
+Clean the initial raw data. Categorize several multilevel variables into a more obvious formation that will work better in the model. Remove or compensate the missing value with average value based on different data types. 
 - Inputs. 
-  Actors(string|Categorical variable), Country(String|Categorical variable), Director(String|Categorical variable), Genre(String|Categorical variable), Language(Integer|Continuous variable), Production(String|Categorical variable), Released(Integer|Continuous variables)
+Actors(string|Categorical variable), Country(String|Categorical variable), Director(String|Categorical variable), Genre(String|Categorical variable), Language(Integer|Continuous variable), Production(String|Categorical variable), Released(Integer|Continuous variables)
 - Outputs. 
-  Dataframe of cleaned data that is ready to build the model and do the data visualization.
+Dataframe of cleaned data that is ready to build the model and do the data visualization.
 - How it works (ideally with pseudo code).
-  Extract the month of "Released date" and categorize it into "quarter" variable.
-  Form a new column to decide whether it is the weekdays/weekends based on "Released data"
-  Sort out the famous "Director" and rate it. 
-  Categorize "Genre" into 10 main kinds of movies and design an algorithm to sort it.
-  Clean the variable "Production" in case of duplicate factors.
-  Deal with the missing value. If the NA appears in categorical data, remove it. Else, use the average value to compensate it.
+Extract the month of "Released date" and categorize it into "quarter" variable.
+Form a new column to decide whether it is the weekdays/weekends based on "Released data"
+Sort out the famous "Director" and rate it. 
+Categorize "Genre" into 10 main kinds of movies and design an algorithm to sort it.
+Clean the variable "Production" in case of duplicate factors.
+Deal with the missing value. If the NA appears in categorical data, remove it. Else, use the average value to compensate it.
 
 Component 4: Regression Models
 To implement regression models, we will use the python class imported from the Scikit-learn package ---  sklearn.linear_model.
