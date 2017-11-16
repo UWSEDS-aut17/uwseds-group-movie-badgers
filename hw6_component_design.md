@@ -15,6 +15,7 @@
 - ...
 
 ## Component specifications. 
+### Data collection
 - Name: 
   get_revenue, info_data, combine
 - What it does: 
@@ -26,7 +27,7 @@
 - How it works:
   First function in the component calls the API of TMDB to get the movie id, the budget and revenue of the most popular movies for the last decade. Info_data uses the movie id collected to collect the other infomations from OMDB API. combine function joints two dataset using the key column: movie id.
 
-- Conduct Data Cleaning
+### Conduct Data Cleaning
   - Name  
     - DataCleaning.py 
 
