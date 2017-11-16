@@ -20,31 +20,27 @@
 - Inputs. Be specific about the data types. For DataFrames, specify the column names and the types of the column values.
 - Outputs. Same consideration as with inputs.
 - How it works (ideally with pseudo code).
-# Data collection
-- Name: 
-  get_revenue, info_data, combine
-- What it does: 
-  This component is used to send requests to web API to collect the metadata. 
-- Inputs: get_revenue: API key of TMDB, Pages go through when movie is sorted by popularity. Info_data: movie_id list, the list contains all the movie with their IMDB id. combine: `.csv` files
-- Outputs: get_revenue: `.csv` file contain movie id, corresponding budget and revenue. Info_data: `.csv` file contain the other infomations of the movie collected (Actor, Director, Rating, Votes, Release date, etc.). combine: Combined `.csv` file
-- How it works:
-  First function in the component calls the API of TMDB to get the movie id, the budget and revenue of the most popular movies for the last decade. Info_data uses the movie id collected to collect the other infomations from OMDB API. combine function joints two dataset using the key column: movie id.
-# Conduct Data Cleaning
-- Name
-  DataCleaning.py 
-- What it does
-  Clean the initial raw data. Categorize several multilevel variables into a more obvious formation that will work better in the model. Remove or compensate the missing value with average value based on different data types. 
-- Inputs. 
-  Actors(string|Categorical variable), Country(String|Categorical variable), Director(String|Categorical variable), Genre(String|Categorical variable), Language(Integer|Continuous variable), Production(String|Categorical variable), Released(Integer|Continuous variables)
-- Outputs. 
-  Dataframe of cleaned data that is ready to build the model and do the data visualization.
-- How it works (ideally with pseudo code).
-  Extract the month of "Released date" and categorize it into "quarter" variable.
-  Form a new column to decide whether it is the weekdays/weekends based on "Released data"
-  Sort out the famous "Director" and rate it. 
-  Categorize "Genre" into 10 main kinds of movies and design an algorithm to sort it.
-  Clean the variable "Production" in case of duplicate factors.
-  Deal with the missing value. If the NA appears in categorical data, remove it. Else, use the average value to compensate it.
+
+* Conduct Data Cleaning
+- Name  
+  -DataCleaning.py 
+  
+- What it does  
+  -Clean the initial raw data. Categorize several multilevel variables into a more obvious formation that will work better in the model. Remove or compensate the missing value with average value based on different data types. 
+
+- Inputs.   
+  -Actors(string|Categorical variable), Country(String|Categorical variable), Director(String|Categorical variable), Genre(String|Categorical variable), Language(Integer|Continuous variable), Production(String|Categorical variable), Released(Integer|Continuous variables)
+
+- Outputs.   
+  -Dataframe of cleaned data that is ready to build the model and do the data visualization.
+
+- How it works (ideally with pseudo code).   
+  -Extract the month of "Released date" and categorize it into "quarter" variable.
+  -Form a new column to decide whether it is the weekdays/weekends based on "Released data"
+  -Sort out the famous "Director" and rate it. 
+  -Categorize "Genre" into 10 main kinds of movies and design an algorithm to sort it.
+  -Clean the variable "Production" in case of duplicate factors.
+  -Deal with the missing value. If the NA appears in categorical data, remove it. Else, use the average value to compensate it.
 
 Component 4: Regression Models
 To implement regression models, we will use the python class imported from the Scikit-learn package ---  sklearn.linear_model.
