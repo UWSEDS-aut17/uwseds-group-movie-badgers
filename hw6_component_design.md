@@ -15,11 +15,16 @@
 - ...
 
 ## Component specifications. 
-- Name. This should be the name that you use in the component's implementation (e.g., the name of a python class or function).
-- What it does. This should be a high level description of the roles of the component.
-- Inputs. Be specific about the data types. For DataFrames, specify the column names and the types of the column values.
-- Outputs. Same consideration as with inputs.
-- How it works (ideally with pseudo code).
+- Name: 
+  get_revenue, info_data, combine
+- What it does: 
+  This component is used to send requests to web API to collect the metadata. 
+- Inputs: 
+  get_revenue: API key of TMDB, Pages go through when movie is sorted by popularity. Info_data: movie_id list, the list contains all the movie with their IMDB id. combine: `.csv` files
+- Outputs: 
+  get_revenue: `.csv` file contain movie id, corresponding budget and revenue. Info_data: `.csv` file contain the other infomations of the movie collected (Actor, Director, Rating, Votes, Release date, etc.). combine: Combined `.csv` file
+- How it works:
+  First function in the component calls the API of TMDB to get the movie id, the budget and revenue of the most popular movies for the last decade. Info_data uses the movie id collected to collect the other infomations from OMDB API. combine function joints two dataset using the key column: movie id.
 
 - Conduct Data Cleaning
   - Name  
