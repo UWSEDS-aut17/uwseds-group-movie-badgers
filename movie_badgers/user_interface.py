@@ -35,7 +35,7 @@ class App(tk.Frame):
                               width=20, height=2, bd=5,
                               command=self.get_help)
 
-        self.report = tk.Button(self, text="View Project Report",
+        self.report = tk.Button(self, text="Researcher Use",
                                 font=('Arial', 12),
                                 width=20, height=2, bd=5,
                                 command=self.print_report)
@@ -63,9 +63,10 @@ class App(tk.Frame):
         self.quit.grid(row=4, column=1)
 
     def get_help(self):
-        helpinfo = "In this system, you can view" \
-                    "our project report and also \npredict the revenue" \
-                    "of a movie with customized parameters.\n"
+        helpinfo = "In this system, user can predict the revenue of" \
+                    "a movie with customized parameters. Researchers can" \
+                    "check more details using our modules and even build" \
+                    "their own prediction models."
         tk.messagebox.showinfo(
             title="Movie Revenue Prediction - User Help", message=helpinfo)
 
