@@ -1,12 +1,12 @@
 # Functional specification
 
 ## Problem Statements
-The project is designed to predict revenue/profit of movies for users who could be theater owner to set the screens in advance or professional media to analysis movie and its market.
+The project is designed to predict revenue/profit of movies for users who could be theater owner to set the screens in advance or professionals in media field who want to find some business insights from movies.
 
 ## User profile
 The computational environments the user should be familiar with are listed as:
 * iPython Notebook
-* Web
+* GUI
 
 ## Elements of the problem statement
 * Access movie information data through OMDB API and TMDB API and joint data
