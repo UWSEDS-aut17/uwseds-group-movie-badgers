@@ -72,7 +72,7 @@ class App(tk.Frame):
 
     def print_report(self):
         # open the file report on google drive
-        os.system("jupyter notebook ../example/demo.ipynb")
+        os.system("start cmd /c jupyter notebook ..\\example\\demo.ipynb")
         # url_project = "https://drive.google.com/file/d/" \
         #                "1VvI4h8u0aof57OnSwIPhDbwV-t5Kcgex/view"
         # webbrowser.open(url_project)
