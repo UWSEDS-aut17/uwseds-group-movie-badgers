@@ -1,3 +1,7 @@
+<p align="center">
+  <img src="http://www.thesoobproductions.co.uk/wp-content/uploads/2012/10/movie-money-film-reel.ju_.09.jpg">
+</p>
+
 # Movie_Income_Prediction
 The movie industry is huge income generater in the entertainment industry, there are many variables that contributes to how successful a movie is, but it's hard to understand how these variables work. 
 
