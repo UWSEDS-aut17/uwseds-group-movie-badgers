@@ -1,20 +1,42 @@
+<p align="center">
+  <img src="http://www.thesoobproductions.co.uk/wp-content/uploads/2012/10/movie-money-film-reel.ju_.09.jpg">
+</p>
+
 # Team Movie Badgers - Movie Revenue Prediction
+
+## Collaborators:
+Anna Huang, Jingyun Chen, Weichen Xu, Chen Ren, Junmeng Zhu
+
+## Project description
+
 The movie industry is huge income generator in the entertainment industry, there are many variables that contribute to how successful a movie is, but it's hard to understand how these variables work. 
 
-![Image of movie income](http://www.thesoobproductions.co.uk/wp-content/uploads/2012/10/movie-money-film-reel.ju_.09.jpg)
+This project aims to **predict movie box-office** based on genre, director(s), actor(s)/actress(es), release date, rating (R, PG13...), average user ratings from IMDB and popularity (number of votes).  
 
-![Image of movie trends by time and lable](https://www.cdc.gov/pcd/issues/2012/images/12_0170_03.gif)
+## Data source
+There are two datasets used in this project. The first one **TMDB** includes the budget, revenue and specific imdb id numbers of movies. The second one **OMDB** dataset contains all the other information of the movies(such as release date,genre,imdb voting...).The two datasets will be linked through **imdb id** which is available on both datasets as unique identifier.
+1. [TMDB](https://www.themoviedb.org/?language=en)
+2. [OMDB](http://www.omdbapi.com/)
 
-This project aims to **predict movie profit (revenue - budgeted cost)** based on genre, director(s), actor(s)/actress(es), release season (month), rating (R, PG13...), other movies released in the same time, average user ratings from IMDB and popularity (number of votes). We also consider to do a sentiment analysis on movie reviews and use the results as predictors to predict movie profit.  
+## Who can use movie badger?
+1. Movie fans/ Theater Owner: User can input the features of a specific movie they want to get its future revenue in the user interface, select a regression model. Then the program presents its estimated revenue
+2. Researchers: Researchers who are interested in movie revenue prediction can import the submodules for independent analysis, collect their own dataset based on self defined parameters, even select features to build model using visualization tools
 
-There are two datasets for this project. The first is the basic details regarding movies, including genre, directors, actors, lables, release, rating, and popularity. This data will be coming from an API call to IMDB. The second set of data looks at profit information and reviews regarding a movie. The two datasets will be linked through **imdb id** which is available on both datasets as unique identifier.
-
-API Data access:
-IMBD movie information
-http://www.imdb.com/interfaces/
-
-Movie DB profit information
-https://developers.themoviedb.org/3/movies/get-movie-details
-
-Collaborators:
-Anna Huang, Jingyun Chen, Weichen Xu, Chen Ren, Junmeng Zhu
+## User guidance
+1. In a terminal(Mac)/cmd window(PC), navigate the the location you want to copy the `movie_badgers` package.
+2. Clone the package by typing the following code in terminal:
+```
+git clone https://github.com/UWSEDS-aut17/uwseds-group-movie-badgers.git
+```
+3. Inside `uwseds-group-movie-badgers` directory, initiate the setup:
+```
+python setup.py install
+```
+4. Lauch the user interface by starting:
+```
+python ./movie_badgers/user_interface.py
+```
+5. (Optional) Researcher use: Windows user can open the demo of all the submodules through **user interface**. Mac user can open that **jupyter notebook** in following directory:
+```
+uwseds-group-movie-badgers/example
+```
