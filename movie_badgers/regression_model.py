@@ -46,7 +46,7 @@ def model_evaluation(model_name, df, n_fold):
     return model
 
 
-def save_model(model, new_model, path):
+def save_model(model, file_name, path):
     """save regression model to local machine as .pkl
     Input:
     model: base model, output of model_evaluation()
@@ -55,6 +55,6 @@ def save_model(model, new_model, path):
     Output:
     "model save complete!"
     """
-    with open(path, "wb") as new_model:
-        pickle.dump(model, new_model)
+    with open(path, "wb") as file_name:
+        pickle.dump(model, file_name)
     return "model save complete!"
