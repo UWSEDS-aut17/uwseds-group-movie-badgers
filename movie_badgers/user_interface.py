@@ -20,14 +20,14 @@ class App(tk.Frame):
                               font=('Arial', 18, 'bold italic'),
                               width=20, height=2)
 
-        logo_file = tk.PhotoImage(file='.\\UI_supporting_files\\logo.gif')
+        logo_file = tk.PhotoImage(file='./UI_supporting_files/logo.gif')
         self.logo_l = tk.Label(self, image=logo_file)
         self.logo_l.photo = logo_file
         self.logo_l2 = tk.Label(self, image=logo_file)
         self.logo_l2.photo = logo_file
 
         image_file = tk.PhotoImage(
-                    file='.\\UI_supporting_files\\Frontpage_image.gif')
+                    file='./UI_supporting_files/Frontpage_image.gif')
         self.image_l = tk.Label(self, image=image_file)
         self.image_l.photo = image_file
 
@@ -72,7 +72,7 @@ class App(tk.Frame):
 
     def print_report(self):
         # open the file report on google drive
-        os.system("jupyter notebook ..\\example\\demo.ipynb")
+        os.system("jupyter notebook ../example/demo.ipynb")
         # url_project = "https://drive.google.com/file/d/" \
         #                "1VvI4h8u0aof57OnSwIPhDbwV-t5Kcgex/view"
         # webbrowser.open(url_project)
@@ -163,19 +163,19 @@ class App(tk.Frame):
         features.extend(Rating_v)
         # print(features)
         if model_selection == 1:
-            with open('.\\UI_supporting_files\\lr_model.pkl',
+            with open('./UI_supporting_files/lr_model.pkl',
                       'rb') as model:
                 new_model = pickle.load(model)
         elif model_selection == 2:
-            with open('.\\UI_supporting_files\\lasso_model.pkl',
+            with open('./UI_supporting_files/lasso_model.pkl',
                       'rb') as model:
                 new_model = pickle.load(model)
         elif model_selection == 3:
-            with open('.\\UI_supporting_files\\ridge_model.pkl',
+            with open('./UI_supporting_files/ridge_model.pkl',
                       'rb') as model:
                 new_model = pickle.load(model)
         elif model_selection == 4:
-            with open('.\\UI_supporting_files\\tree_model.pkl',
+            with open('./UI_supporting_files/tree_model.pkl',
                       'rb') as model:
                 new_model = pickle.load(model)
 
