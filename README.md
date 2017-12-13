@@ -22,6 +22,12 @@ There are two datasets used in this project. The first one **TMDB** includes the
 1. Movie fans/ Theater Owner: User can input the features of a specific movie they want to get its future revenue in the user interface, select a regression model. Then the program presents its estimated revenue
 2. Researchers: Researchers who are interested in movie revenue prediction can import the submodules for independent analysis, collect their own dataset based on self defined parameters, even select features to build model using visualization tools
 
+## Before you start
+To successfully use our program, you may need to have following environments/ libs:
+1. Python 3.5
+2. bokeh
+3. scikit-learn
+
 ## User guidance
 1. In a terminal(Mac)/cmd window(PC), navigate the the location you want to copy the `movie_badgers` package.
 2. Clone the package by typing the following code in terminal:
