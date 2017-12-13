@@ -1,8 +1,9 @@
-import unittest
 import sys
-sys.path.append('../')
-import get_data as gd  # noqa
+import unittest
 import os
+sys.path.append('../')
+import get_data as gd   # noqa
+
 
 class FunctionRunTest(unittest.TestCase):
     """Test if functions run succesfully with correct input"""
@@ -19,6 +20,7 @@ class FunctionRunTest(unittest.TestCase):
     def test_call_data(self):
         os.chdir('../')
         gd.call_data(2011, 2012, 1, 2)
+
 
 if __name__ == '__main__':
     unittest.main()
