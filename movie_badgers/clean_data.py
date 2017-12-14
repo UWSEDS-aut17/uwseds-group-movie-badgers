@@ -8,41 +8,13 @@ import requests
 import os
 
 
-def get_act_pop_avg():
-    """get average poplularity rating for actos by sampling through page numbers
-    Warning:
-    sampling of page numbers are random with 20 numbers ranges from 1 to 1000
-    Input:
-    None needed
-    Output:
-    average actor popularity based on samping
-    """
-
-    # Setting up query and list
-    query_ave = "https://api.themoviedb.org/3/person/popular?" \
-        "api_key=60027f35df522f00e57a79b9d3568423&language=en-US&page=%d"
-    rd = random.sample(range(1, 1000), 20)
-    rd_pop = []
-
-    # For loop to call api based on page numbers sampled above and return
-    # popularity
-    for n in rd:
-        rq = requests.get(query_ave % n).json()
-        for item in rq['results']:
-            rd_pop.append(item['popularity'])
-
-    # compute average popularity
-    ave_pop = np.mean(rd_pop)
-    return ave_pop
-
-
-def clean_director_actor():
+def clean_director_actor(path):
     """add director_actor popularity rating to user generated csv
     Warning:
     This assumes call_data() from get_data module has been ran
     and data_raw_user.csv has been generated
     Input:
-    None needed
+    path - the path for user generated csv
     Output:
     cleaned data frame ready for user analysis
     """
@@ -50,33 +22,26 @@ def clean_director_actor():
     # dev team assume no need to run again to get new ave_pop
     ave_pop = 2.08979
     TMDB_KEY = '60027f35df522f00e57a79b9d3568423'
-    path = os.getcwd()
-    df = pd.read_csv(path + '/data/data_raw_user.csv', encoding="latin1")
+    df = pd.read_csv(path, encoding="latin1")
     Actors_split = []
-
     # split actor names
     for item in df['Actors']:
         item = str(item).split(",")
         Actors_split.append(item)
-
     # split director names
     Directors_split = []
     for item in df['Director']:
         item = str(item).split(",")
         Directors_split.append(item)
-
     # clear whitespace behind the name strings
     for item in Actors_split:
         for i in range(len(item)):
             item[i] = str(item[i]).strip()
-
     # clear whitespace behind the name strings
     for item in Directors_split:
         for i in range(len(item)):
             item[i] = str(item[i]).strip()
-
     Actor_Popularity = []
-    count = 0
     # API calls to get specific actor popularity
     # by looking through actor names
     url = "https://api.themoviedb.org/3/search/person"
@@ -93,14 +58,11 @@ def clean_director_actor():
             except BaseException:
                 pop_sum.append(ave_pop)
         Actor_Popularity.append(np.mean(pop_sum))
-        count = count + 1
-        print(count)
     df['actor_popularity'] = Actor_Popularity
     Director_Popularity = []
     # API calls to get specific director popularity
     # by looking through director names
     dir_count = 0
-
     for item in Directors_split:
         pop = []
         for i in item:
@@ -114,28 +76,23 @@ def clean_director_actor():
             except BaseException:
                 pop.append(ave_pop)
         Director_Popularity.append(np.mean(pop))
-        dir_count = dir_count + 1
-        print(dir_count)
-
     df['director_popularity'] = Director_Popularity
-
     return df
 
 
-def clean_regression_data():
+def clean_regression_data(input_path, output_path):
     """preparing preloaded data for regression and visualizaiton
     Warning:
     This function directly calls data_clean.csv from data folder
     Do not remove this file!
     Input:
-    None needed
+    input_path - local path for data_clean.csv
+    output_path - local path for outputing
     Output:
     Cleaned data frame ready for regression analysis
     and model building
     """
-
-    path = os.getcwd()
-    df = pd.read_csv(path + '/data/data_clean.csv', encoding="latin1")
+    df = pd.read_csv(input_path, encoding="latin1")
     # drop unnecessary columns
     df = df.drop(["Unnamed: 0", "imdb_id", "Title", "X.x", "X.y", "Country",
                   "Actors", "Director", "Year", "Production"], axis=1)
@@ -241,6 +198,5 @@ def clean_regression_data():
     x2 = x2.reset_index().drop("index", axis=1)
     X = pd.concat([x1, x2], axis=1)
     df_for_model = pd.concat([X, y], axis=1)
-    path = os.getcwd()
-    df_for_model.to_csv(path + '/data/data_for_lr.csv', encoding="latin1")
+    df_for_model.to_csv(output_path, encoding="latin1")
     return df_for_model
