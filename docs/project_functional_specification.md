@@ -7,6 +7,7 @@ The project is designed to predict revenue of movies for two types of users for 
 The computational environments the user should be familiar with are listed as:
 * iPython Notebook
 * GUI
+
 User's knowledge of usage
 * For movie-lovers/theater owners: The users are assumed to have less knowledge of the algorithm to use the GUI app.
 * For researchers: Users should understand the models used in the prediction process and packages that used in the data visualization. 
