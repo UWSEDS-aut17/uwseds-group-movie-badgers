@@ -2,9 +2,13 @@
 
 ## Component list
 **1. Collect Data:** Collect movie revenue, other information and combine them
+
 **2. Clean Data:** Conduct missing value imputation, filter features and transfer some features to specific format
+
 **3. Visulization:** Visulize the correlations between features and revenue
+
 **4. Build models:** Build regression models and results difference
+
 **5. User Interface:** User interface for normal users and researchers to interact with package
 
 ## Component specifications
@@ -55,16 +59,16 @@
 ### Build Regression Models
 * Functions: `model_evaluation,save_model`
 * What it does:
-      Using machine learning methods to build several models, make comparisons and save the models. 
+	Using machine learning methods to build several models, make comparisons and save the models. 
 * How it works:
-      * Model_evaluation function is to run different types of models, i.e. linear regression, tree model, ridge, lasso model. Using k-fold cross validation to calculate. Compare the error and the accuracy of models between different methods. 
-      * Save_model function is to save regression models to local machine as .pkl files.
+	* Model_evaluation function is to run different types of models, i.e. linear regression, tree model, ridge, lasso model. Using k-fold cross validation to calculate. Compare the error and the accuracy of models between different methods. 
+	* Save_model function is to save regression models to local machine as .pkl files.
 * Inputs:
-      * model_evaluation: model_name (linaer, ridge, lasso), dataset, number of fold for cross validation
-      * save_model: model_name, file_name, path
+	* model_evaluation: model_name (linaer, ridge, lasso), dataset, number of fold for cross validation
+	* save_model: model_name, file_name, path
 * Outputs:
-      * model_evaluation: established prediction model 
-      * saved model as `.pkl` file
+	* model_evaluation: established prediction model 
+	* saved model as `.pkl` file
 
 ### User Interface
 * File: `user_interface.py`
