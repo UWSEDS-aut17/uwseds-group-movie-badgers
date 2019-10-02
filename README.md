@@ -12,12 +12,10 @@ Anna Huang, Jingyun Chen, Weichen Xu, Chen Ren, Junmeng Zhu
 The movie industry is huge income generator in the entertainment industry, there are many variables that contribute to how successful a movie is, but it's hard to understand how these variables work. 
 
 This project aims to **predict movie box-office** based on genre, director(s), actor(s)/actress(es), release date, rating (R, PG13...), average user ratings from IMDB and popularity (number of votes).  
-
 ## Data source
 There are two datasets used in this project. The first one **TMDB** includes the budget, revenue and specific imdb id numbers of movies. The second one **OMDB** dataset contains all the other information of the movies(such as release date,genre,imdb voting...).The two datasets will be linked through **imdb id** which is available on both datasets as unique identifier.
 1. [TMDB](https://www.themoviedb.org/?language=en)
 2. [OMDB](http://www.omdbapi.com/)
-
 ## Who can use movie badger?
 1. Movie fans/ Theater Owner: User can input the features of a specific movie they want to get its future revenue in the user interface, select a regression model. Then the program presents its estimated revenue
 2. Researchers: Researchers who are interested in movie revenue prediction can import the submodules for independent analysis, collect their own dataset based on self defined parameters, even select features to build model using visualization tools
